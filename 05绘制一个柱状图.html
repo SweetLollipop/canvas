@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 画布canvas的宽高,不可通过样式设置 -->
+    <canvas width=" 800" height="420"></canvas>
+</body>
+
+</html>
+<script>
+    //获取DOM
+    let canvas = document.querySelector('canvas');
+    //获取上下文
+    let ctx = canvas.getContext('2d');
+    //绘制文本--左上角文本
+    ctx.font = "16px 微软雅黑";
+    ctx.fillText('数据可视化', 50, 20);
+</script>
