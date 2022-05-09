@@ -31,5 +31,52 @@
     let ctx = canvas.getContext('2d');
     //绘制文本--左上角文本
     ctx.font = "16px 微软雅黑";
-    ctx.fillText('数据可视化', 50, 20);
+    ctx.fillText('数据可视化', 50, 80);
+    //绘制线段
+    ctx.moveTo(100,100);
+    ctx.lineTo(100,400);
+    ctx.lineTo(700,400);
+    ctx.stroke();
+    //绘制其他线段
+    ctx.moveTo(90,100);
+    ctx.lineTo(700,100);
+    ctx.fillText('150',60,105)
+    ctx.moveTo(90,160);
+    ctx.lineTo(700,160);
+    ctx.fillText('120',60,165)
+    ctx.moveTo(90,220);
+    ctx.lineTo(700,220);
+    ctx.fillText('90',70,225)
+    ctx.moveTo(90,280);
+    ctx.lineTo(700,280);
+    ctx.fillText('60',70,285)
+    ctx.moveTo(90,340);
+    ctx.lineTo(700,340);
+    ctx.fillText('30',70,345)
+    ctx.fillText('0',80,405)
+    ctx.stroke();
+    //绘制水平轴底部的小线段
+    ctx.moveTo(250,400);
+    ctx.lineTo(250,410);
+    //底部文字
+    ctx.fillText('食品', 170, 415);
+    //绘制水平轴底部的小线段
+    ctx.moveTo(400,400);
+    ctx.lineTo(400,410);
+    //底部文字
+    ctx.fillText('数码', 310, 415);
+    //绘制水平轴底部的小线段
+    ctx.moveTo(550,400);
+    ctx.lineTo(550,410);
+    //底部文字
+    ctx.fillText('服饰', 450, 415);
+    ctx.fillText('箱包', 600, 415);
+    ctx.stroke();
+
+    //绘制矩形
+    ctx.fillStyle = 'red';
+    ctx.fillRect(120,200,110,200);
+    ctx.fillRect(270,160,110,240);
+    ctx.fillRect(420,220,110,180);
+    ctx.fillRect(570,100,110,300);
 </script>
