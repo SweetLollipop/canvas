@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>echarts坐标系之一个坐标系</title>
+    <!-- 引入echarts依赖包 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.1.2/echarts.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 100%;
+            height: 400px;
+            /* border: 1px solid black; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 准备一个容器：容器就是现实图标区域 -->
+    <div class="box"></div>
+</body>
+
+</html>
+<script>
+    //基于准备好的DOM初始化echarts实例
+    let dom = document.querySelector('.box');
+    //创建echarts实例
+    let mycharts = echarts.init(dom);
+    //指定图表的配置项与数据
+    mycharts.setOption({
+        //图表的标题
+        title: {
+            //主标题的设置
+            text: 'echarts一个坐标系',
+            //子标题的设置
+            subtext: 'echarts坐标系之一个坐标系',
+            //主标题的颜色
+            textStyle: {
+                color: "cyan"
+            },
+            //设置标题的位置
+            left: "center",
+        },
+        //x轴y轴的配置项
+        xAxis: {
+            //使数据X轴方向均匀呈现
+            type: "category",
+        },
+        yAxis: {
+            //显示y轴的线
+            axisLine: {
+                show: true,
+            },
+            //显示y轴的刻度
+            axisTick: {
+                show: true,
+            }
+        },
+        //系列的设置：绘制什么样类型的图表、数据的展示
+        series: [
+            {
+                //图表类型的设置 柱状图bar 饼状图pie 折线图line
+                name: "散点图",
+                type: 'scatter',
+                //图表的数据
+                data: [
+                    [10, 20],
+                    [13, 66],
+                    [50, 9],
+                    [44, 22],
+                    [15, 9],
+                ],
+                color: "red",
+            },
+        ],
+    })
+</script>
